@@ -1,3 +1,6 @@
+File containing all comparisons of edge cases, along with relative and absolute errors.
+
+
 Negative infinity: -∞
 Largest negative normal: -3,4028235E+38
 Smallest negative normal: -1,1754944E-38
