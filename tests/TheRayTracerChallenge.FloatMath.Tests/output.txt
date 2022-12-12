@@ -1,0 +1,876 @@
+Negative infinity: -∞
+Largest negative normal: -3,4028235E+38
+Smallest negative normal: -1,1754944E-38
+Largest negative subnormal: -1,1754942E-38
+Smallest negative subnormal: -1E-45
+Zero: 0
+Smallest positive subnormal: 1E-45
+Largest positive subnormal: 1,1754942E-38
+Smallest positive normal: 1,1754944E-38
+Largest positive normal: 3,4028235E+38
+Positive infinity: ∞
+NaN: NaN
+Pair: Negative infinity and Negative infinity
+Equality: True
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Negative infinity and Largest negative normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Smallest negative normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Largest negative subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Smallest negative subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Zero
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Smallest positive subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Largest positive subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Smallest positive normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Largest positive normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Negative infinity and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Largest negative normal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest negative normal and Largest negative normal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Largest negative normal and Smallest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Largest negative subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Smallest negative subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Zero
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Smallest positive subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Largest positive subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Smallest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative normal and Largest positive normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest negative normal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest negative normal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Smallest negative normal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest negative normal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Smallest negative normal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Smallest negative normal and Largest negative subnormal
+Equality: False
+Absolute error: 1E-45
+Relative error: 5,960465E-08
+
+
+Pair: Smallest negative normal and Smallest negative subnormal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest negative normal and Zero
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Smallest positive subnormal
+Equality: False
+Absolute error: 1,1754945E-38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Largest positive subnormal
+Equality: False
+Absolute error: 2,3509886E-38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Smallest positive normal
+Equality: False
+Absolute error: 2,3509887E-38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest negative normal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest negative normal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Largest negative subnormal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest negative subnormal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Smallest negative normal
+Equality: False
+Absolute error: 1E-45
+Relative error: 5,960465E-08
+
+
+Pair: Largest negative subnormal and Largest negative subnormal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Largest negative subnormal and Smallest negative subnormal
+Equality: False
+Absolute error: 1,1754941E-38
+Relative error: 0,99999976
+
+
+Pair: Largest negative subnormal and Zero
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Smallest positive subnormal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Largest positive subnormal
+Equality: False
+Absolute error: 2,3509884E-38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Smallest positive normal
+Equality: False
+Absolute error: 2,3509886E-38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest negative subnormal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest negative subnormal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Smallest negative subnormal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest negative subnormal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Smallest negative normal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest negative subnormal and Largest negative subnormal
+Equality: False
+Absolute error: 1,1754941E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest negative subnormal and Smallest negative subnormal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Smallest negative subnormal and Zero
+Equality: False
+Absolute error: 1E-45
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Smallest positive subnormal
+Equality: False
+Absolute error: 3E-45
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Largest positive subnormal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Smallest positive normal
+Equality: False
+Absolute error: 1,1754945E-38
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest negative subnormal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest negative subnormal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Zero and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Zero and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Zero and Smallest negative normal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Zero and Largest negative subnormal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 1
+
+
+Pair: Zero and Smallest negative subnormal
+Equality: False
+Absolute error: 1E-45
+Relative error: 1
+
+
+Pair: Zero and Zero
+Equality: True
+Absolute error: 0
+Relative error: NaN
+
+
+Pair: Zero and Smallest positive subnormal
+Equality: False
+Absolute error: 1E-45
+Relative error: 1
+
+
+Pair: Zero and Largest positive subnormal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 1
+
+
+Pair: Zero and Smallest positive normal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Zero and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Zero and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Zero and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Smallest positive subnormal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest positive subnormal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Smallest negative normal
+Equality: False
+Absolute error: 1,1754945E-38
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Largest negative subnormal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Smallest negative subnormal
+Equality: False
+Absolute error: 3E-45
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Zero
+Equality: False
+Absolute error: 1E-45
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Smallest positive subnormal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Smallest positive subnormal and Largest positive subnormal
+Equality: False
+Absolute error: 1,1754941E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest positive subnormal and Smallest positive normal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest positive subnormal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest positive subnormal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest positive subnormal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Largest positive subnormal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest positive subnormal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Smallest negative normal
+Equality: False
+Absolute error: 2,3509886E-38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Largest negative subnormal
+Equality: False
+Absolute error: 2,3509884E-38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Smallest negative subnormal
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Zero
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Smallest positive subnormal
+Equality: False
+Absolute error: 1,1754941E-38
+Relative error: 0,99999976
+
+
+Pair: Largest positive subnormal and Largest positive subnormal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Largest positive subnormal and Smallest positive normal
+Equality: False
+Absolute error: 1E-45
+Relative error: 5,960465E-08
+
+
+Pair: Largest positive subnormal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive subnormal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest positive subnormal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Smallest positive normal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest positive normal and Largest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Smallest negative normal
+Equality: False
+Absolute error: 2,3509887E-38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Largest negative subnormal
+Equality: False
+Absolute error: 2,3509886E-38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Smallest negative subnormal
+Equality: False
+Absolute error: 1,1754945E-38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Zero
+Equality: False
+Absolute error: 1,1754944E-38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Smallest positive subnormal
+Equality: False
+Absolute error: 1,1754942E-38
+Relative error: 0,99999976
+
+
+Pair: Smallest positive normal and Largest positive subnormal
+Equality: False
+Absolute error: 1E-45
+Relative error: 5,960465E-08
+
+
+Pair: Smallest positive normal and Smallest positive normal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Smallest positive normal and Largest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Smallest positive normal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Smallest positive normal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Largest positive normal and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest positive normal and Largest negative normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest positive normal and Smallest negative normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Largest negative subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Smallest negative subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Zero
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Smallest positive subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Largest positive subnormal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Smallest positive normal
+Equality: False
+Absolute error: 3,4028235E+38
+Relative error: 1
+
+
+Pair: Largest positive normal and Largest positive normal
+Equality: True
+Absolute error: 0
+Relative error: 0
+
+
+Pair: Largest positive normal and Positive infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Largest positive normal and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Positive infinity and Negative infinity
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Largest negative normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Smallest negative normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Largest negative subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Smallest negative subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Zero
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Smallest positive subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Largest positive subnormal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Smallest positive normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Largest positive normal
+Equality: False
+Absolute error: ∞
+Relative error: ∞
+
+
+Pair: Positive infinity and Positive infinity
+Equality: True
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: Positive infinity and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Negative infinity
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Largest negative normal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Smallest negative normal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Largest negative subnormal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Smallest negative subnormal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Zero
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Smallest positive subnormal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Largest positive subnormal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Smallest positive normal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Largest positive normal
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and Positive infinity
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
+Pair: NaN and NaN
+Equality: False
+Absolute error: NaN
+Relative error: NaN
+
+
