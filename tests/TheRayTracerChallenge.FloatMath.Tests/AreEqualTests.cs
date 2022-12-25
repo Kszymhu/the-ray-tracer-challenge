@@ -131,6 +131,34 @@ namespace TheRayTracerChallenge.FloatMath.Tests
          * (-float.Epsilon, float.NaN)
          */
 
-        /**/
+        /* --- Opposite sides of 0 ---
+         * Given_TwoNormalFloats_When_OppositeSigns_Then_NotEqual
+         * (1.000000001f, -1.0f)
+         * (-1.0f, 1.000000001f)
+         * (-1.000000001f, 1.0f)
+         * (1.0f, -1.000000001f)
+         * Given_TwoSmallSubnormals_When_OppositeSigns_Then_Equal
+         * (10 * float.Epsilon, 10 * -float.Epsilon)
+         * Given_TwoLargeSubnormals_When_OppositeSigns_Then_NotEqual
+         * (10000 * float.Epsilon, 10000 * -float.Epsilon)
+         */
+
+        /* -- Floats really close to eachother ---
+         * Given_SmallestFloats_When_SameSign_Then_Equal
+         * (float.Epsilon, float.Epsilon)
+         * Given_SmallestFloats_When_OppositeSigns_Then_Equal
+         * (float.Epsilon, -float.Epsilon)
+         * (-float.Epsilon, float.Epsilon)
+         * Given_SmallestFloatAndZero_Then_Equal
+         * (float.Epsilon, 0)
+         * (0, float.Epsilon)
+         * (-float.Epsilon, 0)
+         * (0, -float.Epsilon)
+         * Given_NormalFloatAndSmallestFloat_Then_NotEqual
+         * (0.000000001f, Float.MIN_VALUE)
+         * (0.000000001f, -Float.MIN_VALUE)
+         * (-0.000000001f, Float.MIN_VALUE)
+         * (-0.000000001f, -Float.MIN_VALUE)
+         */
     }
 }
