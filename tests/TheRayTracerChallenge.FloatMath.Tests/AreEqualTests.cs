@@ -5,7 +5,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         // Tests shamelessly stolen from https://floating-point-gui.de/errors/NearlyEqualsTest.java
         // Big thanks to the original author, because doing this by hand would be a living nightmare.
 
-        // Waiting for a stablre release of XUnit 3 so that I can name those individual tests
+        // Waiting for a stable release of XUnit 3 so that I can name those individual tests
         // without writing them as separate methods.
 
         private const float TestingThreshold = 0.00001f; // Used for most tests, except like 2 or sth
@@ -90,7 +90,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
             bool result_a = Comparisons.AreEqual(a, b, threshold);
             bool result_b = Comparisons.AreEqual(b, a, threshold);
             bool result = (result_a == result_b) && (result_a == expected);
-            Assert.True(result, string.Format("AreEqual(a, b, threshold) = {0}", result_a));
+            Assert.True(result, string.Format("AreEqual({0}, {1}, {2}) = {3}", a, b, threshold, result_a));
         }
     }
 }
