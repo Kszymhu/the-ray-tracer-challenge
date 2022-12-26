@@ -8,10 +8,10 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         // Waiting for a stablre release of XUnit 3 so that I can name those individual tests
         // without writing them as separate methods.
 
-        private const float TestingThreshold = 0.0001f; // Used for most tests, except like 2 or sth
+        private const float TestingThreshold = 0.00001f; // Used for most tests, except like 2 or sth
 
 
-        [Theory]
+        [Theory(DisplayName = nameof(Given_TwoFloats_Then_CorrectEquality))]
         // Large Floats
         [InlineData(1000000f, 1000001f, true)]
         [InlineData(10000f, 10001f, false)]
@@ -29,7 +29,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         [InlineData(-0.000000000001002f, -0.000000000001001f, false)]
         // Floats close to eachother, but a bit from 0
         [InlineData(0.3f, 0.30000003f, true)]
-        [InlineData(-0.3f, -0.30000003f, false)]
+        [InlineData(-0.3f, -0.30000003f, true)]
         // Comparisons with 0
         [InlineData(0.0f, 0.0f, true)]
         [InlineData(0.00000001f, 0.0f, false)]
@@ -90,7 +90,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
             bool result_a = Comparisons.AreEqual(a, b, threshold);
             bool result_b = Comparisons.AreEqual(b, a, threshold);
             bool result = (result_a == result_b) && (result_a == expected);
-            Assert.True(result);
+            Assert.True(result, string.Format("AreEqual(a, b, threshold) = {0}", result_a));
         }
     }
 }

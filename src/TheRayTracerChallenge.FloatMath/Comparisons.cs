@@ -2,9 +2,33 @@
 {
     public static class Comparisons
     {
-        public static bool AreEqual(float a, float b, float threshold = 0.0001f)
+        // Algorithm shamelessly stolen from https://floating-point-gui.de/errors/comparison/
+        // Big thanks to the original author.
+
+        // got it by clicking boxes at https://www.h-schmidt.net/FloatConverter/IEEE754.html
+        public const float SmallestNormalFloat = 1.1754943508222875079687365372222456778186655567720875215087517062784172594547271728515625e-38f;
+
+        public static bool AreEqual(float a, float b, float threshold = 0.00001f)
         {
-            throw new NotImplementedException();
+            if (a == b)
+            {
+                return true;
+            }
+
+            float absoluteA = MathF.Abs(a);
+            float absoluteB = MathF.Abs(b);
+            float absoluteDifference = MathF.Abs(a - b);
+            bool closeToZero = (a == 0 || b == 0 || absoluteA + absoluteB < SmallestNormalFloat);
+
+            if (closeToZero) // Use absolute difference
+            {
+                return absoluteDifference < (threshold * SmallestNormalFloat);
+            }
+            else // Use relative difference
+            {
+                float relativeDifference = absoluteDifference / MathF.Min((absoluteA + absoluteB), float.MaxValue);
+                return relativeDifference < threshold;
+            }
         }
 
         public static bool AreInequal(float a, float b, float threshold = 0.0001f)
