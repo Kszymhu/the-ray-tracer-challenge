@@ -10,6 +10,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
 
         private const float TestingThreshold = 0.0001f; // Used for most tests, except like 2 or sth
 
+
         [Theory]
         // Large Floats
         [InlineData(1000000f, 1000001f, true)]
@@ -37,6 +38,52 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         [InlineData(1e-40f, 0.0f, false, 0.000001f)]
         [InlineData(0.0f, -1e-40f, true, 0.01f)]
         [InlineData(-1e-40f, 0.0f, false, 0.000001f)]
+        // Comparisons with extreme values
+        [InlineData(float.MaxValue, float.MaxValue, true)]
+        [InlineData(float.MinValue, float.MinValue, true)]
+        [InlineData(float.MinValue, float.MaxValue, false)]
+        [InlineData(float.MaxValue, float.MaxValue / 2, false)]
+        [InlineData(float.MaxValue, float.MinValue / 2, false)]
+        [InlineData(float.MinValue, float.MaxValue / 2, false)]
+        [InlineData(float.MinValue, float.MinValue / 2, false)]
+        // Comparisons with infinities
+        [InlineData(float.PositiveInfinity, float.PositiveInfinity, true)]
+        [InlineData(float.NegativeInfinity, float.NegativeInfinity, true)]
+        [InlineData(float.PositiveInfinity, float.NegativeInfinity, false)]
+        [InlineData(float.PositiveInfinity, float.MaxValue, false)]
+        [InlineData(float.PositiveInfinity, float.MinValue, false)]
+        [InlineData(float.NegativeInfinity, float.MaxValue, false)]
+        [InlineData(float.NegativeInfinity, float.MinValue, false)]
+        // Comparisons with NaNs
+        [InlineData(float.NaN, float.NaN, false)]
+        [InlineData(float.NaN, 0.0f, false)]
+        [InlineData(0.0f, float.NaN, false)]
+        [InlineData(float.NaN, float.PositiveInfinity, false)]
+        [InlineData(float.PositiveInfinity, float.NaN, false)]
+        [InlineData(float.NaN, float.NegativeInfinity, false)]
+        [InlineData(float.NegativeInfinity, float.NaN, false)]
+        [InlineData(float.NaN, float.MaxValue, false)]
+        [InlineData(float.MaxValue, float.NaN, false)]
+        [InlineData(float.NaN, float.MinValue, false)]
+        [InlineData(float.MinValue, float.NaN, false)]
+        [InlineData(float.NaN, float.Epsilon, false)]
+        [InlineData(float.Epsilon, float.NaN, false)]
+        [InlineData(float.NaN, -float.Epsilon, false)]
+        [InlineData(-float.Epsilon, float.NaN, false)]
+        // Floats on opposite sides of 0
+        [InlineData(1.000000001f, -1.0f, false)]
+        [InlineData(-1.000000001f, 1.0f, false)]
+        [InlineData(10 * float.Epsilon, 10 * -float.Epsilon, true)]
+        [InlineData(10000 * float.Epsilon, 10000 * -float.Epsilon, false)]
+        // Floats really close to eachother
+        [InlineData(float.Epsilon, float.Epsilon, true)]
+        [InlineData(float.Epsilon, -float.Epsilon, true)]
+        [InlineData(float.Epsilon, 0, true)]
+        [InlineData(-float.Epsilon, 0, true)]
+        [InlineData(0.000000001f, float.Epsilon, false)]
+        [InlineData(0.000000001f, -float.Epsilon, false)]
+        [InlineData(-0.000000001f, float.Epsilon, false)]
+        [InlineData(-0.000000001f, -float.Epsilon, false)]
 
         public void Given_TwoFloats_Then_CorrectEquality(float a, float b, bool expected, float threshold = TestingThreshold)
         {
@@ -45,82 +92,5 @@ namespace TheRayTracerChallenge.FloatMath.Tests
             bool result = (result_a == result_b) && (result_a == expected);
             Assert.True(result);
         }
-
-        /* --- Comparisons with extreme values ---
-         * Given_TwoExtremeValues_When_Same_Then_Equal
-         * (float.MaxValue, float.MaxValue)
-         * (float.MinValue, float.MinValue)
-         * Given_TwoExtremeValues_When_Different_Then_NotEqual
-         * (float.MinValue, float.MaxValue)
-         * (float.MaxValue, float.MinValue)
-         * Given_ExtremeValueAndHalvedExtremeValue_Then_NotEqual
-         * (float.MaxValue, float.MaxValue / 2)
-         * (float.MaxValue, float.MinValue / 2)
-         * (float.MinValue, float.MaxValue / 2)
-         * (float.MinValue, float.MinValue / 2)
-         */
-
-        /* --- Comparisons with infinities ---
-         * Given_TwoInfinities_When_Same_Then_Equal
-         * (float.PositiveInfinity, float.PositiveInifnity)
-         * (float.NegativeInfinity, float.NegativeInifnity)
-         * Given_TwoInfinities_When_Different_Then_NotEqual
-         * (float.PositiveInifnity, float.NegativeInfinity)
-         * (float.NegativeInfinity, float.PositiveInfinity)
-         * Given_InfinityAndExtremeValue_Then_NotEqual
-         * (float.PositiveInifnity, float.MaxValue)
-         * (float.PositiveInfinity, float.MinValue)
-         * (float.NegativeInfinity, float.MaxValue)
-         * (float.NegativeInfinity, float.MinValue)
-         */
-
-        /* --- Comparisons with NaNs
-         * Given_NanAndWhatever_Then_NotEqual
-         * (float.NaN, float.NaN)
-         * (float.NaN, 0.0f)
-         * (0.0f, float.NaN)
-         * (float.NaN, float.PositiveInfinity)
-         * (float.PositiveInfinity, float.NaN)
-         * (float.NaN, float.NegatvieInfinity)
-         * (float.NegativeInfinity, float.NaN)
-         * (float.NaN, float.MaxValue)
-         * (float.MaxValue, float.NaN)
-         * (float.NaN, float.MinValue)
-         * (float.MinValue, float.NaN)
-         * (float.NaN, float.Epsilon)
-         * (float.Epsilon, float.NaN)
-         * (float.NaN, -float.Epsilon)
-         * (-float.Epsilon, float.NaN)
-         */
-
-        /* --- Opposite sides of 0 ---
-         * Given_TwoNormalFloats_When_OppositeSigns_Then_NotEqual
-         * (1.000000001f, -1.0f)
-         * (-1.0f, 1.000000001f)
-         * (-1.000000001f, 1.0f)
-         * (1.0f, -1.000000001f)
-         * Given_TwoSmallSubnormals_When_OppositeSigns_Then_Equal
-         * (10 * float.Epsilon, 10 * -float.Epsilon)
-         * Given_TwoLargeSubnormals_When_OppositeSigns_Then_NotEqual
-         * (10000 * float.Epsilon, 10000 * -float.Epsilon)
-         */
-
-        /* -- Floats really close to eachother ---
-         * Given_SmallestFloats_When_SameSign_Then_Equal
-         * (float.Epsilon, float.Epsilon)
-         * Given_SmallestFloats_When_OppositeSigns_Then_Equal
-         * (float.Epsilon, -float.Epsilon)
-         * (-float.Epsilon, float.Epsilon)
-         * Given_SmallestFloatAndZero_Then_Equal
-         * (float.Epsilon, 0)
-         * (0, float.Epsilon)
-         * (-float.Epsilon, 0)
-         * (0, -float.Epsilon)
-         * Given_NormalFloatAndSmallestFloat_Then_NotEqual
-         * (0.000000001f, Float.MIN_VALUE)
-         * (0.000000001f, -Float.MIN_VALUE)
-         * (-0.000000001f, Float.MIN_VALUE)
-         * (-0.000000001f, -Float.MIN_VALUE)
-         */
     }
 }
