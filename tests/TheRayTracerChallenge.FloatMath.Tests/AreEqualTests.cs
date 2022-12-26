@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace TheRayTracerChallenge.FloatMath.Tests
 {
     public class AreEqualTests
@@ -7,82 +5,46 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         // Tests shamelessly stolen from https://floating-point-gui.de/errors/NearlyEqualsTest.java
         // Big thanks to the original author, because doing this by hand would be a living nightmare.
 
-        private const float TestingEpsilon = 0.0001f;
+        // Waiting for a stablre release of XUnit 3 so that I can name those individual tests
+        // without writing them as separate methods.
 
-        /* --- Large Floats ---
-         * Given_TwoPositiveLargeFloats_When_SmallDifference_Then_Equal
-         * (1000000f, 1000001f)
-         * (1000001f, 1000000f)
-         * Given_TwoPositiveLargeFloats_When_LargeDifference_Then_NotEqual
-         * (10000f, 10001f)
-         * (10001f, 10000f)
-         * Given_TwoNegativeLargeFloats_When_SmallDifference_Then_Equal
-         * (-1000000f, -1000001f)
-         * (-1000001f, -1000000f)
-         * Given_TwoNegativeLargeFloats_When_LargeDifference_Then_NotEqual
-         * (-10000f, -10001f)
-         * (-10001f, -10000f)
-         */
+        private const float TestingThreshold = 0.0001f; // Used for most tests, except like 2 or sth
 
-        /* --- Around 1 ---
-         * Given_TwoFloatsAroundPositiveOne_When_SmallDifference_Then_Equal
-         * (1.0000001f, 1.0000002f)
-         * (1.0000002f, 1.0000001f)
-         * Given_TwoFloatsAroundPositiveOne_When_LargeDifference_Then_NotEqual
-         * (1.0002f, 1.0001f)
-         * (1.0001f, 1.0002f)
-         * Given_TwoFloatsAroundNegativeOne_When_SmallDifference_Then_Equal
-         * (-1.000001f, -1.000002f)
-         * (-1.000002f, -1.000001f)
-         * Given_TwoFloatsAroundNegativeOne_When_LargeDifference_Then_NotEqual
-         * (-1.0001f, -1.0002f)
-         * (-1.0002f, -1.0001f)
-         */
+        [Theory]
+        // Large Floats
+        [InlineData(1000000f, 1000001f, true)]
+        [InlineData(10000f, 10001f, false)]
+        [InlineData(-1000000f, -1000001f, true)]
+        [InlineData(-10000f, -10001f, false)]
+        // Floats around 1 and -1
+        [InlineData(1.0000001f, 1.0000002f, true)]
+        [InlineData(1.0002f, 1.0001f, false)]
+        [InlineData(-1.000001f, -1.000002f, true)]
+        [InlineData(-1.0002f, -1.0001f, false)]
+        // Floats close to 0
+        [InlineData(0.000000001000001f, 0.000000001000002f, true)]
+        [InlineData(0.000000000001002f, 0.000000000001001f, false)]
+        [InlineData(-0.000000001000001f, -0.000000001000002, true)]
+        [InlineData(-0.000000000001002f, -0.000000000001001f, false)]
+        // Floats close to eachother, but a bit from 0
+        [InlineData(0.3f, 0.30000003f, true)]
+        [InlineData(-0.3f, -0.30000003f, false)]
+        // Comparisons with 0
+        [InlineData(0.0f, 0.0f, true)]
+        [InlineData(0.00000001f, 0.0f, false)]
+        [InlineData(-0.00000001f, 0.0f, false)]
+        [InlineData(0.0f, 1e-40f, true, 0.01f)]
+        [InlineData(1e-40f, 0.0f, false, 0.000001f)]
+        [InlineData(0.0f, -1e-40f, true, 0.01f)]
+        [InlineData(-1e-40f, 0.0f, false, 0.000001f)]
 
-        /* --- Between 0 and 1 ---
-         * Given_TwoFloatsBetweenZeroAndPositiveOne_When_SmallDifference_Then_Equal
-         * (0.000000001000001f, 0.000000001000002f)
-         * (0.000000001000002f, 0.000000001000001f)
-         * Given_TwoFloatsBetweenZeroAndPositiveOne_When_LargeDifference_Then_NotEqual
-         * (0.000000000001002f, 0.000000000001001f)
-         * (0.000000000001001f, 0.000000000001002f)
-         * Given_TwoFloatsBetweenNegativeOneAndZero_When_SmallDifference_Then_Equal
-         * (-0.000000001000001f, -0.000000001000002f)
-         * (-0.000000001000002f, -0.000000001000001f)
-         * Given_TwoFloatsBetweenNegativeOneAndZero_When_LargeDifference_Then_NotEqual
-         * (-0.000000000001002f, -0.000000000001001f)
-         * (-0.000000000001001f, -0.000000000001002f)
-         */
-
-        /* --- Small differences away form 0 ---
-         * Given_TwoPositiveFloatsAwayFromZero_When_SmallDifference_Then_Equal
-         * (0.3f, 0.30000003f)
-         * Given_TwoNegativeFloatsAwayFromZero_When_LargeDifference_Then_NotEqual
-         * (-0.3f, -0.30000003f)
-         */
-
-        /* --- Comparisons with 0 ---
-         * Given_TwoZeros_Then_Equal
-         * (0.0f, 0.0f)
-         * Given_ZeroAndFloatBetweenZeroAndPositiveOne_Then_NotEqual
-         * (0.00000001f, 0.0f)
-         * (0.0f, 0.00000001f)
-         * Given_ZeroAndFloatBetweenNegativeOneAndZero_Then_NotEqual
-         * (-0.00000001f, 0.0f)
-         * (0.0f, -0.00000001f)
-         * Given_ZeroAndPositiveSubnormalFloat_When_LargeEpsilon_Then_Equal
-         * (0.0f, 1e-40f, 0.01f)
-         * (1e-40f, 0.0f, 0.01f)
-         * Given_ZeroAndPositiveSubnormalFloat_When_SmallEpsilon_Then_NotEqual
-         * (1e-40f, 0.0f, 0.000001f)
-         * (0.0f, 1e-40f, 0.000001f)
-         * Given_ZeroAndNegativeSubnormalFloat_When_LargeEpsilon_Then_Equal
-         * (0.0f, -1e-40f, 0.01f)
-         * (-1e-40f, 0.0f, 0.01f)
-         * Given_ZeroAndNegativeSubnormalFloat_When_SmallEpsilon_Then_NotEqual
-         * (-1e-40f, 0.0f, 0.000001f)
-         * (0.0f, -1e-40f, 0.000001f)
-         */
+        public void Given_TwoFloats_Then_CorrectEquality(float a, float b, bool expected, float threshold = TestingThreshold)
+        {
+            bool result_a = Comparisons.AreEqual(a, b, threshold);
+            bool result_b = Comparisons.AreEqual(b, a, threshold);
+            bool result = (result_a == result_b) && (result_a == expected);
+            Assert.True(result);
+        }
 
         /* --- Comparisons with extreme values ---
          * Given_TwoExtremeValues_When_Same_Then_Equal
