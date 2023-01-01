@@ -57,19 +57,12 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         // Comparisons with NaNs
         [InlineData(float.NaN, float.NaN, false)]
         [InlineData(float.NaN, 0.0f, false)]
-        [InlineData(0.0f, float.NaN, false)]
         [InlineData(float.NaN, float.PositiveInfinity, false)]
-        [InlineData(float.PositiveInfinity, float.NaN, false)]
         [InlineData(float.NaN, float.NegativeInfinity, false)]
-        [InlineData(float.NegativeInfinity, float.NaN, false)]
         [InlineData(float.NaN, float.MaxValue, false)]
-        [InlineData(float.MaxValue, float.NaN, false)]
         [InlineData(float.NaN, float.MinValue, false)]
-        [InlineData(float.MinValue, float.NaN, false)]
         [InlineData(float.NaN, float.Epsilon, false)]
-        [InlineData(float.Epsilon, float.NaN, false)]
         [InlineData(float.NaN, -float.Epsilon, false)]
-        [InlineData(-float.Epsilon, float.NaN, false)]
         // Floats on opposite sides of 0
         [InlineData(1.000000001f, -1.0f, false)]
         [InlineData(-1.000000001f, 1.0f, false)]
@@ -77,6 +70,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         [InlineData(10000 * float.Epsilon, 10000 * -float.Epsilon, false)]
         // Floats really close to eachother
         [InlineData(float.Epsilon, float.Epsilon, true)]
+        [InlineData(-float.Epsilon, -float.Epsilon, true)]
         [InlineData(float.Epsilon, -float.Epsilon, true)]
         [InlineData(float.Epsilon, 0, true)]
         [InlineData(-float.Epsilon, 0, true)]

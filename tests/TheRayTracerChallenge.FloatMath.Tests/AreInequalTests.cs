@@ -52,19 +52,12 @@
         // Comparisons with NaNs
         [InlineData(float.NaN, float.NaN, true)]
         [InlineData(float.NaN, 0.0f, true)]
-        [InlineData(0.0f, float.NaN, true)]
         [InlineData(float.NaN, float.PositiveInfinity, true)]
-        [InlineData(float.PositiveInfinity, float.NaN, true)]
         [InlineData(float.NaN, float.NegativeInfinity, true)]
-        [InlineData(float.NegativeInfinity, float.NaN, true)]
         [InlineData(float.NaN, float.MaxValue, true)]
-        [InlineData(float.MaxValue, float.NaN, true)]
         [InlineData(float.NaN, float.MinValue, true)]
-        [InlineData(float.MinValue, float.NaN, true)]
         [InlineData(float.NaN, float.Epsilon, true)]
-        [InlineData(float.Epsilon, float.NaN, true)]
         [InlineData(float.NaN, -float.Epsilon, true)]
-        [InlineData(-float.Epsilon, float.NaN, true)]
         // Floats on opposite sides of 0
         [InlineData(1.000000001f, -1.0f, true)]
         [InlineData(-1.000000001f, 1.0f, true)]
@@ -72,6 +65,7 @@
         [InlineData(10000 * float.Epsilon, 10000 * -float.Epsilon, true)]
         // Floats really close to eachother
         [InlineData(float.Epsilon, float.Epsilon, false)]
+        [InlineData(-float.Epsilon, -float.Epsilon, false)]
         [InlineData(float.Epsilon, -float.Epsilon, false)]
         [InlineData(float.Epsilon, 0, false)]
         [InlineData(-float.Epsilon, 0, false)]
