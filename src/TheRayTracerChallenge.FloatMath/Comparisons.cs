@@ -38,7 +38,7 @@
 
         public static bool IsGreater(float a, float b, float threshold = 0.0001f)
         {
-            throw new NotImplementedException();
+            return AreInequal(a, b, threshold) && a > b;
         }
 
         public static bool IsLess(float a, float b, float threshold = 0.0001f)

@@ -34,7 +34,7 @@
         [InlineData(-0.000000001000001f, -0.000000001000002, false)] // equal
         [InlineData(-0.000000001000002f, -0.000000001000001, false)] // equal
         [InlineData(-0.000000000001002f, -0.000000000001001f, false)] // inequal, b is greater
-        [InlineData(-0.000000000001001f, -0.000000000001002f, false)] // inequal, a is greater
+        [InlineData(-0.000000000001001f, -0.000000000001002f, true)] // inequal, a is greater
         // Floats close to eachother, but a bit from 0
         [InlineData(0.3f, 0.30000003f, false)] // equal
         [InlineData(0.30000003f, 0.3f, false)] // equal
@@ -70,7 +70,8 @@
         // Comparisons with infinities
         [InlineData(float.PositiveInfinity, float.PositiveInfinity, false)] // equal
         [InlineData(float.NegativeInfinity, float.NegativeInfinity, false)] // equal
-        [InlineData(float.PositiveInfinity, float.NegativeInfinity, false)]
+        [InlineData(float.PositiveInfinity, float.NegativeInfinity, true)] // inequal, a is greater
+        [InlineData(float.NegativeInfinity, float.PositiveInfinity, false)] // inequal, b is greater
         [InlineData(float.PositiveInfinity, float.MaxValue, true)] // inequal, a is greater
         [InlineData(float.MaxValue, float.PositiveInfinity, false)] // inequal, b is greater
         [InlineData(float.PositiveInfinity, float.MinValue, true)] // inequal, a is greater
@@ -105,7 +106,7 @@
         // Floats really close to eachother
         [InlineData(float.Epsilon, float.Epsilon, false)] // equal
         [InlineData(float.Epsilon, -float.Epsilon, false)] // equal
-        [InlineData(-float.Epsilon, float.Epsilon, true)] // equal
+        [InlineData(-float.Epsilon, float.Epsilon, false)] // equal
         [InlineData(float.Epsilon, 0, false)] // equal
         [InlineData(0, float.Epsilon, false)] // equal
         [InlineData(-float.Epsilon, 0, false)] // equal
