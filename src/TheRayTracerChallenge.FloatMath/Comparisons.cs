@@ -43,17 +43,17 @@
 
         public static bool IsLess(float a, float b, float threshold = 0.0001f)
         {
-            throw new NotImplementedException();
+            return AreInequal(a, b, threshold) && a < b;
         }
 
         public static bool IsGreaterOrEqual(float a, float b, float threshold = 0.0001f)
         {
-            throw new NotImplementedException();
+            return AreEqual(a, b, threshold) || IsGreater(a, b, threshold);
         }
 
         public static bool IsLessOrEqual(float a, float b, float threshold = 0.0001f)
         {
-            throw new NotImplementedException();
+            return AreEqual(a, b, threshold) || IsLess(a, b, threshold);
         }
     }
 }
