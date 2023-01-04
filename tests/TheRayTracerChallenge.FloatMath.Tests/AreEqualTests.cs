@@ -11,7 +11,7 @@ namespace TheRayTracerChallenge.FloatMath.Tests
         private const float TestingThreshold = 0.00001f; // Used for most tests, except like 2 or sth
 
 
-        [Theory(DisplayName = nameof(Given_TwoFloats_Then_CorrectEquality))]
+        [Theory]
         // Large Floats
         [InlineData(1000000f, 1000001f, true)]
         [InlineData(10000f, 10001f, false)]

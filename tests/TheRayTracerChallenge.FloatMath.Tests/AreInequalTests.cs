@@ -6,7 +6,7 @@
 
         private const float TestingThreshold = 0.00001f;
 
-        [Theory(DisplayName = nameof(Given_TwoFloats_Then_CorrectInequality))]
+        [Theory]
         // Large Floats
         [InlineData(1000000f, 1000001f, false)]
         [InlineData(10000f, 10001f, true)]
