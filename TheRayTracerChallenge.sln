@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge.FloatMath", "src\TheRayTracerChallenge.FloatMath\TheRayTracerChallenge.FloatMath.csproj", "{A71AADDE-CBEB-4329-8389-E00E56AE6E27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge.FloatMath", "src\TheRayTracerChallenge.FloatMath\TheRayTracerChallenge.FloatMath.csproj", "{A71AADDE-CBEB-4329-8389-E00E56AE6E27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge.FloatMath.Tests", "tests\TheRayTracerChallenge.FloatMath.Tests\TheRayTracerChallenge.FloatMath.Tests.csproj", "{536FECDB-74F1-40A5-8F19-80F104D6D6B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge.FloatMath.Tests", "tests\TheRayTracerChallenge.FloatMath.Tests\TheRayTracerChallenge.FloatMath.Tests.csproj", "{536FECDB-74F1-40A5-8F19-80F104D6D6B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge", "src\TheRayTracerChallenge\TheRayTracerChallenge.csproj", "{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge.Tests", "tests\TheRayTracerChallenge.Tests\TheRayTracerChallenge.Tests.csproj", "{0D7C576D-064A-4CC0-9327-06A7A14E42AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{536FECDB-74F1-40A5-8F19-80F104D6D6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{536FECDB-74F1-40A5-8F19-80F104D6D6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{536FECDB-74F1-40A5-8F19-80F104D6D6B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
