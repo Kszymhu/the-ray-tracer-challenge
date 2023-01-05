@@ -11,5 +11,18 @@
         public static Vector Up { get => new (0, 1, 0); }
         public static Vector Back { get => new (0, 0, -1); }
         public static Vector Forward { get => new (0, 0, 1); }
+
+        public override bool Equals(object? obj) { return base.Equals(obj); }
+        public override int GetHashCode() { return base.GetHashCode(); }
+
+        public static bool operator ==(Vector a, Vector b)
+        {
+            return a.Equals(b);
+        }
+
+        public static bool operator !=(Vector a, Vector b)
+        {
+            return !a.Equals(b);
+        }
     }
 }

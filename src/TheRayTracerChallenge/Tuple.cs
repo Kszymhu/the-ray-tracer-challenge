@@ -1,7 +1,12 @@
-﻿namespace TheRayTracerChallenge
+﻿using System.Diagnostics;
+using TheRayTracerChallenge.FloatMath;
+
+namespace TheRayTracerChallenge
 {
     public abstract class Tuple
     {
+        public const float EqualityThreshold = 0.00001f;
+
         private readonly List<float> _coordinates;
 
         protected Tuple(float x, float y, float z, float w)
@@ -33,6 +38,21 @@
         public override int GetHashCode()
         {
             return HashCode.Combine(X, Y, Z, W);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            else
+            {
+                Tuple tupleObj = (Tuple)obj;
+                bool sameX = Comparisons.AreEqual(X, tupleObj.X, EqualityThreshold);
+                bool sameY = Comparisons.AreEqual(Y, tupleObj.Y, EqualityThreshold);
+                bool sameZ = Comparisons.AreEqual(Z, tupleObj.Z, EqualityThreshold);
+                bool sameW = Comparisons.AreEqual(W, tupleObj.W, EqualityThreshold);
+                return sameX && sameY && sameZ && sameW;
+            }
         }
     }
 }
