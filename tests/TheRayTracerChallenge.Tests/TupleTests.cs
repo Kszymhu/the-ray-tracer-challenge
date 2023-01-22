@@ -48,7 +48,7 @@ namespace TheRayTracerChallenge.Tests
         [Fact]
         public void Given_Point_Then_CorrectCoordinates()
         {
-            List<float> coordinates = new () { 1, 2, 3, 1 };
+            List<float> coordinates = new() { 1, 2, 3, 1 };
             Point point = new(coordinates[0], coordinates[1], coordinates[2]);
 
             Assert.Equal(point.GetCoordinates(), coordinates);
