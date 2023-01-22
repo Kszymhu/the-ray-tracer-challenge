@@ -14,6 +14,15 @@ namespace TheRayTracerChallenge.Tests
         }
 
         [Theory]
+        [InlineData(1, 2, 3)]
+        public void Given_Vector_Then_CorrectNegation(float x, float y, float z)
+        {
+            Vector vector = new(x, y, z);
+            Vector correct = new(-x, -y, -z);
+            Assert.Equal(-vector, correct);
+        }
+
+        [Theory]
         [InlineData(1, 2, 3, 5)]
         public void Given_FloatAndVector_Then_CorrectScaling(float x, float y, float z, float f)
         {

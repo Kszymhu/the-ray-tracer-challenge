@@ -18,19 +18,19 @@
 
         public static Vector operator -(Point a, Point b)
         {
-            throw new NotImplementedException();
+            return new(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
         }
         public static Point operator -(Point a, Vector b)
         {
-            throw new NotImplementedException();
+            return new(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
         }
         public static Point operator +(Point a, Vector b)
         {
-            throw new NotImplementedException();
+            return new(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
         }
         public static Point operator +(Vector a, Point b)
         {
-            throw new NotImplementedException();
+            return new(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
         }
 
         public override bool Equals(object? obj) { return base.Equals(obj); }

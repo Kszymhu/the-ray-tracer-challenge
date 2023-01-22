@@ -26,37 +26,45 @@
             return !a.Equals(b);
         }
 
+        public static Vector operator -(Vector a)
+        {
+            return new(-a.X, -a.Y, -a.Z);
+        }
+
         public static Vector operator +(Vector a, Vector b)
         {
-            throw new NotImplementedException();
+            return new(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
         }
         public static Vector operator -(Vector a, Vector b)
         {
-            throw new NotImplementedException();
+            return new(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
         }
         public static Vector operator *(Vector a, float b)
         {
-            throw new NotImplementedException();
+            return new(a.X * b, a.Y * b, a.Z * b);
         }
         public static Vector operator *(float a, Vector b)
         {
-            throw new NotImplementedException();
+            return new(a * b.X, a * b.Y, a * b.Z);
         }
         public static Vector operator /(Vector a, float b)
         {
-            throw new NotImplementedException();
+            return new(a.X / b, a.Y / b, a.Z / b);
         }
 
         public static float DotProduct(Vector a, Vector b)
         {
-            throw new NotImplementedException();
+            return (a.X * b.X) + (a.Y * b.Y) + (a.Z * b.Z);
         }
         public static Vector CrossProduct(Vector a, Vector b)
         {
-            throw new NotImplementedException();
+            float resultX = (a.Y * b.Z) - (a.Z * b.Y);
+            float resultY = (a.Z * b.X) - (a.X * b.Z);
+            float resultZ = (a.X * b.Y) - (a.Y * b.X);
+            return new(resultX, resultY, resultZ);
         }
 
-        public override bool Equals(object? obj) { return base.Equals(obj); }
+        public override bool Equals(object? obj) => base.Equals(obj);
         public override int GetHashCode() { return base.GetHashCode(); }
     }
 }
