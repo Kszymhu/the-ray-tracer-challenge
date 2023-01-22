@@ -2,7 +2,7 @@ using TheRayTracerChallenge.FloatMath;
 
 namespace TheRayTracerChallenge.Tests
 {
-    public class TupleOperationsTests
+    public class VectorOperationsTests
     {
         [Theory]
         [InlineData(1, 2, 3)]
@@ -57,11 +57,33 @@ namespace TheRayTracerChallenge.Tests
             Assert.Equal(vector1 - vector2, correct);
         }
 
-        // v dot v
-        // --- DotProduct((1, 2, 3), (4, 5, 6)) = 32
-        // v cross v
-        // --- CrossProduct((1, 2, 3), (4, 5, 6)) = (-3, 6, -3) 
-        //
+        [Theory]
+        [InlineData(1, 2, 3, 4, 5, 6)]
+        public void Given_TwoVectors_Then_CorrectDotProduct(float x1, float y1, float z1, float x2, float y2, float z2)
+        {
+            Vector vector1 = new(x1, y1, z1);
+            Vector vector2 = new(x2, y2, z2);
+            float correct = (x1 * x2 + y1 * y2 + z1 * z2);
+
+            Assert.Equal(Vector.DotProduct(vector1, vector2), correct);
+            Assert.Equal(Vector.DotProduct(vector2, vector1), correct);
+        }
+
+        [Theory]
+        [InlineData(1, 2, 3, 4, 5, 6)]
+        public void Given_TwoVectors_Then_CorrectCrossProduct(float x1, float y1, float z1, float x2, float y2, float z2)
+        {
+            Vector vector1 = new(x1, y1, z1);
+            Vector vector2 = new(x2, y2, z2);
+
+            float correctX = (y1 * z2) - (z1 * y2);
+            float correctY = (z1 * x2) - (x1 * z2);
+            float correctZ = (x1 * y2) - (y1 * x2);
+            Vector correct = new(correctX, correctY, correctZ);
+
+            Assert.Equal(Vector.CrossProduct(vector1, vector2), correct);
+        }
+
         // p - p
         // --- (1, 2, 3) - (6, 5, 4) = (-5, -3, -1)
         // p + v

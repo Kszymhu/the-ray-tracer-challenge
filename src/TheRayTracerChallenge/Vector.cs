@@ -17,9 +17,6 @@
             get => MathF.Sqrt((X * X) + (Y * Y) + (Z * Z));
         }
 
-        public override bool Equals(object? obj) { return base.Equals(obj); }
-        public override int GetHashCode() { return base.GetHashCode(); }
-
         public static bool operator ==(Vector a, Vector b)
         {
             return a.Equals(b);
@@ -49,5 +46,17 @@
         {
             throw new NotImplementedException();
         }
+
+        public static float DotProduct(Vector a, Vector b)
+        {
+            throw new NotImplementedException();
+        }
+        public static Vector CrossProduct(Vector a, Vector b)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Equals(object? obj) { return base.Equals(obj); }
+        public override int GetHashCode() { return base.GetHashCode(); }
     }
 }
