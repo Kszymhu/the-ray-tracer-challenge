@@ -36,7 +36,9 @@ namespace TheRayTracerChallenge.Tests
 
         [Theory]
         [InlineData(1, 2, 3, 4, 5, 6)]
-        public void Given_TwoVectors_Then_CorrectAddition(float x1, float y1, float z1, float x2, float y2, float z2)
+        public void Given_TwoVectors_Then_CorrectAddition(
+            float x1, float y1, float z1,
+            float x2, float y2, float z2)
         {
             Vector vector1 = new(x1, y1, z1);
             Vector vector2 = new(x2, y2, z2);
@@ -48,7 +50,9 @@ namespace TheRayTracerChallenge.Tests
 
         [Theory]
         [InlineData(1, 2, 3, 6, 5, 4)]
-        public void Given_TwoVectors_Then_CorrectSubtraction(float x1, float y1, float z1, float x2, float y2, float z2)
+        public void Given_TwoVectors_Then_CorrectSubtraction(
+            float x1, float y1, float z1,
+            float x2, float y2, float z2)
         {
             Vector vector1 = new(x1, y1, z1);
             Vector vector2 = new(x2, y2, z2);
@@ -59,7 +63,9 @@ namespace TheRayTracerChallenge.Tests
 
         [Theory]
         [InlineData(1, 2, 3, 4, 5, 6)]
-        public void Given_TwoVectors_Then_CorrectDotProduct(float x1, float y1, float z1, float x2, float y2, float z2)
+        public void Given_TwoVectors_Then_CorrectDotProduct(
+            float x1, float y1, float z1,
+            float x2, float y2, float z2)
         {
             Vector vector1 = new(x1, y1, z1);
             Vector vector2 = new(x2, y2, z2);
@@ -71,7 +77,9 @@ namespace TheRayTracerChallenge.Tests
 
         [Theory]
         [InlineData(1, 2, 3, 4, 5, 6)]
-        public void Given_TwoVectors_Then_CorrectCrossProduct(float x1, float y1, float z1, float x2, float y2, float z2)
+        public void Given_TwoVectors_Then_CorrectCrossProduct(
+            float x1, float y1, float z1,
+            float x2, float y2, float z2)
         {
             Vector vector1 = new(x1, y1, z1);
             Vector vector2 = new(x2, y2, z2);
@@ -83,12 +91,5 @@ namespace TheRayTracerChallenge.Tests
 
             Assert.Equal(Vector.CrossProduct(vector1, vector2), correct);
         }
-
-        // p - p
-        // --- (1, 2, 3) - (6, 5, 4) = (-5, -3, -1)
-        // p + v
-        // --- (1, 2, 3) + (4, 5, 6) = (5, 7, 9)
-        // p - v
-        // --- (1, 2, 3) - (6, 5, 4) = (-5, -3, -1)
     }
 }
