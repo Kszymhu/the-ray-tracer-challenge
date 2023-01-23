@@ -23,6 +23,16 @@ namespace TheRayTracerChallenge.Tests
         }
 
         [Theory]
+        [InlineData(1, 2, 3)]
+        public void Given_Vector_Then_CorrectNormalization(float x, float y, float z)
+        {
+            Vector vector = new(x, y, z);
+            float magnitude = MathF.Sqrt(x * x + y * y + z * z);
+            Vector correct = new(x / magnitude, y / magnitude, z / magnitude);
+            Assert.Equal(vector.Normalized, correct);
+        }
+
+        [Theory]
         [InlineData(1, 2, 3, 5)]
         public void Given_FloatAndVector_Then_CorrectScaling(float x, float y, float z, float f)
         {

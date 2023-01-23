@@ -17,6 +17,11 @@
             get => MathF.Sqrt((X * X) + (Y * Y) + (Z * Z));
         }
 
+        public Vector Normalized
+        {
+            get => this / Magnitude;
+        }
+
         public static bool operator ==(Vector a, Vector b)
         {
             return a.Equals(b);
