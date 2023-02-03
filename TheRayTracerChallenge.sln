@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge.Float
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge.FloatMath.Tests", "tests\TheRayTracerChallenge.FloatMath.Tests\TheRayTracerChallenge.FloatMath.Tests.csproj", "{536FECDB-74F1-40A5-8F19-80F104D6D6B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge", "src\TheRayTracerChallenge\TheRayTracerChallenge.csproj", "{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge", "src\TheRayTracerChallenge\TheRayTracerChallenge.csproj", "{0430EE95-9F51-4BB7-A44E-AAD04A6FE1E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRayTracerChallenge.Tests", "tests\TheRayTracerChallenge.Tests\TheRayTracerChallenge.Tests.csproj", "{0D7C576D-064A-4CC0-9327-06A7A14E42AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRayTracerChallenge.Tests", "tests\TheRayTracerChallenge.Tests\TheRayTracerChallenge.Tests.csproj", "{0D7C576D-064A-4CC0-9327-06A7A14E42AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BallisticsSimulator", "samples\BallisticsSimulator\BallisticsSimulator.csproj", "{90EB5ECD-3AC5-42F8-A654-68C04F4C255B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D7C576D-064A-4CC0-9327-06A7A14E42AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90EB5ECD-3AC5-42F8-A654-68C04F4C255B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90EB5ECD-3AC5-42F8-A654-68C04F4C255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90EB5ECD-3AC5-42F8-A654-68C04F4C255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90EB5ECD-3AC5-42F8-A654-68C04F4C255B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
