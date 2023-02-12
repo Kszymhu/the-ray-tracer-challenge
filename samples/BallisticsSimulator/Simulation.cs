@@ -1,4 +1,5 @@
 ﻿using TheRayTracerChallenge;
+using TheRayTracerChallenge.FloatMath;
 
 namespace BallisticsSimulator
 {
@@ -9,8 +10,6 @@ namespace BallisticsSimulator
         private SimulationParameters Parameters { get; init; }
         private float TimeStep { get; init; }
         private float MaxTime { get; init; }
-        private int MaxSteps { get; init; }
-
 
         public Simulation(
             SimulationParameters parameters,
@@ -22,9 +21,31 @@ namespace BallisticsSimulator
             Parameters = parameters;
             TimeStep = timeStep;
             MaxTime = maxTime;
-            MaxSteps = maxSteps;
 
             _steps = new() { initialStep };
+        }
+
+        public List<SimulationStep> GetSteps()
+        {
+            return _steps;
+        }
+
+        public void Run()
+        {
+            while(true)
+            {
+                SimulationStep lastStep = _steps.Last();
+
+                bool didReachMaxTime = Comparisons.IsGreaterOrEqual(lastStep.Time, MaxTime);
+                bool didReachGround = Comparisons.IsLessOrEqual(lastStep.ProjectilePosition.Y, 0);
+                bool shouldStop = !(didReachMaxTime || didReachGround);
+
+                if (shouldStop)
+                    return;
+
+                SimulationStep nextStep = GetNextStep(lastStep);
+                _steps.Add(nextStep);
+            }
         }
 
         private Vector GetAcceleration(Vector velocity)
