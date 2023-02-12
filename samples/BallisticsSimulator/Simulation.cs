@@ -4,8 +4,28 @@ namespace BallisticsSimulator
 {
     public class Simulation
     {
-        public SimulationParameters Parameters { get; private init; }
-        public float TimeStep { get; private init; }
+        private readonly List<SimulationStep> _steps;
+
+        private SimulationParameters Parameters { get; init; }
+        private float TimeStep { get; init; }
+        private float MaxTime { get; init; }
+        private int MaxSteps { get; init; }
+
+
+        public Simulation(
+            SimulationParameters parameters,
+            SimulationStep initialStep,
+            float timeStep,
+            float maxTime,
+            int maxSteps)
+        {
+            Parameters = parameters;
+            TimeStep = timeStep;
+            MaxTime = maxTime;
+            MaxSteps = maxSteps;
+
+            _steps = new() { initialStep };
+        }
 
         private Vector GetAcceleration(Vector velocity)
         {
