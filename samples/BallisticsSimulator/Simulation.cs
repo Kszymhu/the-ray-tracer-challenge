@@ -15,8 +15,7 @@ namespace BallisticsSimulator
             SimulationParameters parameters,
             SimulationStep initialStep,
             float timeStep,
-            float maxTime,
-            int maxSteps)
+            float maxTime)
         {
             Parameters = parameters;
             TimeStep = timeStep;
@@ -38,7 +37,8 @@ namespace BallisticsSimulator
 
                 bool didReachMaxTime = Comparisons.IsGreaterOrEqual(lastStep.Time, MaxTime);
                 bool didReachGround = Comparisons.IsLessOrEqual(lastStep.ProjectilePosition.Y, 0);
-                bool shouldStop = !(didReachMaxTime || didReachGround);
+                bool isFirstStep = _steps.Count == 1;
+                bool shouldStop = (didReachMaxTime || didReachGround) && !isFirstStep;
 
                 if (shouldStop)
                     return;
